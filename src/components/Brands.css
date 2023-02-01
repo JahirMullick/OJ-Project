@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    /* font-family: 'Moon Dance', cursive; */
+    /* font-family: 'Playfair Display', serif; */
+    /* font-family: 'Roboto Mono', monospace; */
+    font-family: 'Bebas Neue', sans-serif;
+    /* font-family: 'Sevillana', cursive; */
+}
+
+.navfixed {
+    position: fixed;
+    z-index: 10;
+}
+
+.mainButton {
+    position: absolute;
+    margin-top: -628px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 98px;
+    text-align: start;
+    height: 70vh;
+    width: 160px;
+    justify-content: space-around;
+
+}
+
+@media (max-width: 1400px) {
+    .mainButton {
+        margin-top: -530px;
+    }
+}
+
+/* .all_btn {
+    font-weight: bold;
+} */
+
+.all_btn {
+    /* position: absolute; */
+    align-items: center;
+    display: flex;
+    margin: 3px 3px 30px 3px;
+}
+
+.dropdown-menu.show {
+    border: none;
+}
+
+.brand_button {
+    font-size: 20px;
+    font-weight: 500;
+}
