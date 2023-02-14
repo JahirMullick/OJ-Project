@@ -3,9 +3,11 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { FiShoppingCart } from "react-icons/fi";
 import { CgMenu, CgClose } from "react-icons/cg";
+import { useCartContext } from "../context/cart_context";
 
 const Nav = () => {
   const [menuIcon, setMenuIcon] = useState();
+  const {total_item} = useCartContext();
 
   const Nav = styled.nav`
     .navbar-lists {
@@ -29,6 +31,7 @@ const Nav = () => {
     button{
       width: 30px;
       font-size: 20px;
+      border: none;
     }
 
     .navbar-link {
@@ -349,9 +352,17 @@ const Nav = () => {
             </NavLink>
           </li>
           <li>
+            <NavLink
+              to="/login"
+              className="navbar-link"
+              onClick={() => setMenuIcon(false)}>
+              <span style={{ fontFamily: "Bebas Neue, sans-serif", fontSize: "18px" }}>LOGIN</span>
+            </NavLink>
+          </li>
+          <li>
             <NavLink to="/cart" className="navbar-link cart-trolley--link">
               <FiShoppingCart className="cart-trolley" />
-              <span className="cart-total--item"> 10 </span>
+              <span className="cart-total--item"> {total_item} </span>
             </NavLink>
           </li>
         </ul>

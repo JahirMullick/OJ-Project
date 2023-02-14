@@ -4,7 +4,7 @@
 
 // --------------------> New Code <---------
 import Slider from './Slider'
-import Brands from './Brands'
+// import Brands from './Brands'
 import styled from "styled-components";
 // --------------------> New Code <---------
 
@@ -45,7 +45,7 @@ const HeroSection = () => {
         // --------------------> New Code <---------
         <Wrapper>
             <Slider />
-            <Brands />
+            {/* <Brands /> */}
             {/* <div>
         <img src='./images/HomeImage.jpg' alt='afterSliderImage' style={{ width: "100%" }} />
       </div> */}
