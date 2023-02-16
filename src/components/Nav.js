@@ -3,11 +3,19 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { FiShoppingCart } from "react-icons/fi";
 import { CgMenu, CgClose } from "react-icons/cg";
+import { useCartContext } from "../context/cart_context";
 
 const Nav = () => {
   const [menuIcon, setMenuIcon] = useState();
+  const {total_item} = useCartContext();
 
   const Nav = styled.nav`
+    .dropdown-menu{
+      background: "transparent";
+      border: "none";
+      font-size: "15px";
+
+    }
     .navbar-lists {
       display: flex;
       gap: 4.8rem;
@@ -29,6 +37,7 @@ const Nav = () => {
     button{
       width: 30px;
       font-size: 20px;
+      border: none;
     }
 
     .navbar-link {
@@ -186,6 +195,8 @@ const Nav = () => {
     }
   `;
 
+ 
+
   return (
     <Nav>
       <div className={menuIcon ? "navbar active" : "navbar"}>
@@ -195,22 +206,24 @@ const Nav = () => {
 
             <div className="dropdown ddbrand">
 
-              <button type="button" class="btn dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <button type="button" className="btn dropdown" data-bs-toggle="dropdown" aria-expanded="false">
                 HAPPY
               </button>
               {/* <a className="btn dropdown-toggle" href="/product" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                
               </a> */}
 
-              <ul class="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Action</a></li>
-                <li><a className="dropdown-item" href="#">Another action</a></li>
+              <ul className="dropdown-menu" style={{ background: "transparent",
+                border: "none",
+                fontSize: "15px",}}>
+                <li><a className="dropdown-item" href="#">Half suits (2-8 years)</a></li>
+                <li><a className="dropdown-item" href="#">Full suits (2-8 years)</a></li>
               </ul>
             </div>
 
             <div className="dropdown ddbrand">
 
-              <button type="button" class="btn dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <button type="button" className="btn dropdown" data-bs-toggle="dropdown" aria-expanded="false">
                 BLESS
               </button>
 
@@ -218,15 +231,17 @@ const Nav = () => {
                 BLESS
               </a> */}
 
-              <ul class="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Action</a></li>
-                <li><a className="dropdown-item" href="#">Another action</a></li>
+            <ul className="dropdown-menu" style={{ background: "transparent",
+                border: "none",
+                fontSize: "15px",}}>
+                <li><a className="dropdown-item" href="#">Half suits (1-3 years)</a></li>
+                <li><a className="dropdown-item" href="#">Full suits (1-3 years)</a></li>
               </ul>
             </div>
 
             <div className="dropdown ddbrand">
 
-              <button type="button" class="btn dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <button type="button" className="btn dropdown" data-bs-toggle="dropdown" aria-expanded="false">
                 ENJOY
               </button>
 
@@ -234,15 +249,17 @@ const Nav = () => {
                 ENJOY
               </a> */}
 
-              <ul class="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Action</a></li>
-                <li><a className="dropdown-item" href="#">Another action</a></li>
+            <ul className="dropdown-menu" style={{ background: "transparent",
+                border: "none",
+                fontSize: "15px",}}>
+                <li><a className="dropdown-item" href="#">Half suits (4-9 years)</a></li>
+                <li><a className="dropdown-item" href="#">Full suits (4-9 years)</a></li>
               </ul>
             </div>
 
             <div className="dropdown ddbrand">
 
-              <button type="button" class="btn dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <button type="button" className="btn dropdown" data-bs-toggle="dropdown" aria-expanded="false">
                 HUNAR
               </button>
 
@@ -250,15 +267,17 @@ const Nav = () => {
                 HUNAR
               </a> */}
 
-              <ul class="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Action</a></li>
-                <li><a className="dropdown-item" href="#">Another action</a></li>
+            <ul className="dropdown-menu" style={{ background: "transparent",
+                border: "none",
+                fontSize: "15px",}}>
+                <li><a className="dropdown-item" href="#">Half suits (0 size)</a></li>
+                <li><a className="dropdown-item" href="#">Full suits (0 size)</a></li>
               </ul>
             </div>
 
             <div className="dropdown ddbrand">
 
-              <button type="button" class="btn dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <button type="button" className="btn dropdown" data-bs-toggle="dropdown" aria-expanded="false">
                 FUN
               </button>
 
@@ -266,15 +285,17 @@ const Nav = () => {
                 FUN
               </a> */}
 
-              <ul class="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Action</a></li>
-                <li><a className="dropdown-item" href="#">Another action</a></li>
+            <ul className="dropdown-menu" style={{ background: "transparent",
+                border: "none",
+                fontSize: "15px",}}>
+                <li><a className="dropdown-item" href="#">Half suits (12-18 months)</a></li>
+                <li><a className="dropdown-item" href="#">Full suits (12-18 months)</a></li>
               </ul>
             </div>
 
             <div className="dropdown ddbrand">
 
-              <button type="button" class="btn dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <button type="button" className="btn dropdown" data-bs-toggle="dropdown" aria-expanded="false">
                 LIL'BEE
               </button>
 
@@ -282,15 +303,17 @@ const Nav = () => {
                 LIL'BEE
               </a> */}
 
-              <ul class="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Action</a></li>
-                <li><a className="dropdown-item" href="#">Another action</a></li>
+            <ul className="dropdown-menu" style={{ background: "transparent",
+                border: "none",
+                fontSize: "15px",}}>
+                <li><a className="dropdown-item" href="#">Half suits (1-3 years)</a></li>
+                <li><a className="dropdown-item" href="#">Full suits (1-3 years)</a></li>
               </ul>
             </div>
 
             <div className="dropdown ddbrand">
 
-              <button type="button" class="btn dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <button type="button" className="btn dropdown" data-bs-toggle="dropdown" aria-expanded="false">
                 BLOKE
               </button>
 
@@ -298,9 +321,11 @@ const Nav = () => {
                 BLOKE
               </a> */}
 
-              <ul class="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Action</a></li>
-                <li><a className="dropdown-item" href="#">Another action</a></li>
+            <ul className="dropdown-menu" style={{ background: "transparent",
+                border: "none",
+                fontSize: "15px",}}>
+                <li><a className="dropdown-item" href="#">Half t-shirts (8-13 years)</a></li>
+                <li><a className="dropdown-item" href="#">Full t-shirts (8-13 years)</a></li>
               </ul>
             </div>
 
@@ -349,9 +374,17 @@ const Nav = () => {
             </NavLink>
           </li>
           <li>
+            <NavLink
+              to="/login"
+              className="navbar-link"
+              onClick={() => setMenuIcon(false)}>
+              <span style={{ fontFamily: "Bebas Neue, sans-serif", fontSize: "18px" }}>LOGIN</span>
+            </NavLink>
+          </li>
+          <li>
             <NavLink to="/cart" className="navbar-link cart-trolley--link">
               <FiShoppingCart className="cart-trolley" />
-              <span className="cart-total--item"> 10 </span>
+              <span className="cart-total--item"> {total_item} </span>
             </NavLink>
           </li>
         </ul>

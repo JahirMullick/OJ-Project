@@ -2,17 +2,17 @@ import styled from "styled-components";
 import FilterSection from "./components/FilterSection";
 import ProductList from "./components/ProductList";
 import Sort from "./components/Sort";
-import { useFilterContext } from "./context/filter_context";
+// import { useFilterContext } from "./context/filter_context";
 
 const Products = () => {
   return (
     <Wrapper>
       <div className="container grid grid-filter-column">
-        <div>
+        <div style={{marginTop:"50px"}}>
           <FilterSection />
         </div>
 
-        <section className="product-view--sort">
+        <section className="product-view--sort" style={{marginTop:"50px"}}>
           <div className="sort-filter">
             <Sort />
           </div>
